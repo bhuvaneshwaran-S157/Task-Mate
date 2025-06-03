@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { removeHabit, toggleDay } from '../Store/habitSlice';
 import Lottie from 'lottie-react';
 import sparkleAnimation from '../assets/Animation - 1748960740817.json'
+import deleteIcon from '../assets/icons8-delete-30.png';
+
 const HabitItem = (props) => {
   const dispatch = useDispatch();
   const handleToggle = (day) => {
@@ -22,9 +24,9 @@ const HabitItem = (props) => {
   return (
     <div className="bg-white p-4 rounded-md shadow-md space-y-4">
       {
-        percentage===100 && (
+        percentage === 100 && (
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-54 z-10">
-            <Lottie animationData={sparkleAnimation} loop={false}/>
+            <Lottie animationData={sparkleAnimation} loop={false} />
           </div>
         )
       }
@@ -37,7 +39,7 @@ const HabitItem = (props) => {
           onClick={handleRemove}
           className="bg-red-500 text-white px-3 py-1 flex justify-between  items-center rounded hover:bg-red-600 cursor-pointer"
         >
-          <img src="../src/assets/icons8-delete-30.png" alt="" />
+          <img src={deleteIcon} alt="" />
           <span className='hidden sm:inline'>Delete</span>
         </button>
       </div>
