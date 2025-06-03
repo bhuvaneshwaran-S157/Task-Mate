@@ -42,7 +42,7 @@ const HabitItem = (props) => {
         </button>
       </div>
 
-      <div className="flex flex-wrap gap-1 justify-between">
+      <div className="flex flex-wrap gap-8 justify-between">
         {Object.entries(props.week).map(([day, checked]) => (
           <>
             <label key={day} className="flex flex-wrap items-center gap-1">
@@ -59,10 +59,10 @@ const HabitItem = (props) => {
 
         ))}
         <div className="flex flex-col items-center mt-3">
-          <div className="relative w-20 h-20 rounded-full transition-all" style={{ background: `conic-gradient(#3b82f6 0% ${percentage}%, #d1d5db ${percentage}% 100%) `, transition: "all" }}>
+          <div className="relative w-15 h-15 rounded-full transition-all" style={{ background: `conic-gradient(#3b82f6 0% ${percentage}%, #d1d5db ${percentage}% 100%) `, transition: "all" }}>
             {/* Inner circle to create border effect */}
-            <div className="absolute top-2 left-2 w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <span className="text-blue-600 font-semibold text-lg">{percentage}%</span>
+            <div className="absolute top-2 left-2 w-11 h-11 bg-white rounded-full flex items-center justify-center">
+              <span className="text-blue-600 font-semibold text-sm">{percentage}%</span>
             </div>
           </div>
         </div>
